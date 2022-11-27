@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-    width: 310px;
+    width: 320px;
     margin: 5em auto;
 }
 
@@ -34,8 +34,7 @@ body {
     overflow: hidden;
 }
 
-
-.card-container img{
+.card-container img {
     width: 60px;
     height: auto;
     font-family: var(--font-lexend-deca);
@@ -54,7 +53,7 @@ body {
     flex: 1;
 }
 
-.card  h1 {
+.card h1 {
     font-size: 2.5em;
     text-transform: uppercase;
     font-family: var(--font-big-shoulder);
@@ -83,7 +82,7 @@ body {
 
 .luxury .button {
     color: var(--very-dark-cyan);
-} 
+}
 
 .card .button {
     text-decoration: none;
@@ -96,7 +95,8 @@ body {
     border: 2px solid var(--very-light-gray);
 }
 
-.card .button:hover, .card .button:focus {
+.card .button:hover,
+.card .button:focus {
     color: var(--very-light-gray);
     background-color: inherit;
 }
@@ -110,8 +110,6 @@ body {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
-
-
 
 @media (min-width: 768px) {
     .container {
@@ -146,5 +144,5 @@ body {
 @media (min-width: 1201px) {
     .container {
         width: 65vw;
-    }   
+    }
 }
