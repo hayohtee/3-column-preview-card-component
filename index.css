@@ -1,13 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
 * {
     margin: unset;
     padding: unset;
     box-sizing: border-box;
 }
 
+:root {
+    --color-bright-orange: hsl(31, 77%, 52%);
+    --color-dark-cyan: hsl(184, 100%, 22%);
+    --color-very-dark-cyan: hsl(179, 100%, 13%);
+    --font-family-big-shoulders: "Big Shoulders Display", sans-serif;
+    --font-family-lexend: "Lexend Deca", serif;
+}
+
+body {
+    font-family: var(--font-family-lexend);
+    font-weight: 400;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 25em;
+    margin: 2em auto;
+}
+
+
+h2 {
+    font-family: var(--font-family-big-shoulders);
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card {
+    display: grid;
+    place-content: center;
+    min-height: 30em;
+    padding-inline: 2.5em;
+    gap: 2em;
+    color: #fafafa;
+    font-size: 1.4rem;
+}
+
+.card:nth-child(1) {
+    background-color: var(--color-bright-orange);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+.card:nth-child(1) a {
+    color: var(--color-bright-orange);
+}
+
+
+.card:nth-child(2) {
+    background-color: var(--color-dark-cyan);
+}
+
+.card:nth-child(2) a {
+    color: var(--color-dark-cyan);
+}
+
+
+.card:nth-child(3) {
+    background-color: var(--color-very-dark-cyan);
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+.card:nth-child(3) a {
+    color: var(--color-very-dark-cyan);
+}
+
+
+.button a {
+    text-decoration: none;
+    background-color: #fafafa;
+    padding: 0.8em 2em;
+    border-radius: 2em;
+    display: inline-block;
+}
+
+.button a:hover {
+    background-color: inherit;
+    color: #fafafa;
+    border: 2px solid #fafafa;
+}
+
+
 .attribution {
     font-size: 11px;
     text-align: center;
 }
+
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+@media only screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        max-width: 768px;
+    }
+
+
+    .card:nth-child(1) {
+        border-radius: unset;
+        border-top-left-radius: 1em;
+    }
+
+    .card:nth-child(2) {
+        border-top-right-radius: 1em;
+    }
+
+    .card:nth-child(3) {
+        border-radius: unset;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        grid-column: span 2;
+        min-height: 25em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .grid-container {
+        max-width: 1024px;
+        margin: 3em auto;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card:nth-child(1) {
+        border-radius: unset;
+        border-top-left-radius: 1em;
+        border-bottom-left-radius: 1em;
+    }
+
+    .card:nth-child(2) {
+        border-radius: unset;
+    }
+
+    .card:nth-child(3) {
+        grid-column: inherit;
+        border-radius: unset;
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em;
+    }
+} 
